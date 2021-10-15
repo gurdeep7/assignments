@@ -16,13 +16,14 @@ margin-top: 0px;
      margin-top: 30px;
      display: flex;
  }
- #navbar > :nth-child(3) >input{
+ #navbar > :nth-child(3) > div>*{
  width: 300px;
  height: 30px;
  }
  #navbar >:nth-child(3){
      width: fit-content;
      margin: auto;
+     display: flex;
  }
  #navbar > :nth-child(3) >button{
     height: 35px;
@@ -36,4 +37,36 @@ margin-top: 0px;
     border-radius: 50%;
     margin: 10px;
     vertical-align: top;
+}
+#sidebar{
+    display: inline-block;
+    flex-direction: column;
+    width: fit-content;
+    transition: 2s;
+    height: fit-content;
+}
+#sidebar> *{
+font-size:30px;
+margin: 10px;
+}
+.hidden{
+    margin-left: 20px;
+    vertical-align: top;
+    text-align: left;
+    display: none;
+}
+#sidebar :hover{
+background-color: grey;
+
+}
+#grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+}
+#searchresults{
+    height: 300px !important;
+    position: absolute;
+    background-color: gainsboro;
+    display: none;
 }

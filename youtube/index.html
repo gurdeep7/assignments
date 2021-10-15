@@ -11,7 +11,7 @@
 </head>
 <body>
 <div id= "navbar">
- <div id = "menu">
+ <div id = "menu" onclick="sidebar()">
      <div></div>
      <div></div>
      <div></div>
@@ -19,9 +19,12 @@
  </div>
  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/502px-Logo_of_YouTube_%282015-2017%29.svg.png">
 <div>
-    <input type="text" placeholder="Search" id="search">
+    <div>
+    <input type="text" placeholder="Search" id="search"">
+    <div id= "searchresults"></div>
+</div>
     <button onclick="Search()" class="material-icons">search</button>
-    <span class="material-icons" style="height: 35px; background-color: #E0E0E0; padding: 5px; box-sizing: border-box; border-radius: 50%;">
+    <span class="material-icons" style="height: 35px; background-color: #E0E0E0; padding: 5px; box-sizing: border-box; border-radius: 50%; margin-left: 10px;">
         mic
         </span>
 </div>
@@ -38,6 +41,38 @@
         <img src="https://yt3.ggpht.com/yti/APfAmoHsFfnROaqHEfJ62b1r2FGRoV8IqyylpT373A=s88-c-k-c0x00ffffff-no-rj-mo">
 </div>
 </div>
-<div id="sidebar"></div>
+<div style="display: flex; height: auto;">
+<div id="sidebar" onclick="sidebar()">
+<div><span class="material-icons" style="font-size: 30px;">
+    home
+    </span><span class="hidden">Home</span></div>
+    <div><span class="material-icons"style="font-size: 30px;">
+        explore
+        </span><span class="hidden">Explore</span></div>
+        <div><span class="material-icons"style="font-size: 30px;">
+            subscriptions
+            </span><span class="hidden"style="font-size: 30px;">Subscriptions</span></div>
+            <hr/>
+            <div><span class="material-icons" style="font-size: 30px;">
+                video_library
+                </span><span class="hidden"style="font-size: 30px;">Library</span></div>
+                <div><span class="material-icons" style="font-size: 30px;">
+                    history
+                    </span><span class="hidden"style="font-size: 30px;">History</span></div>
+                    <div><span class="material-icons" style="font-size: 30px;">
+                        smart_display
+                        </span><span class="hidden">Your videos</span></div>
+                        <div><span class="material-icons"style="font-size: 30px;">
+                            watch_later
+                            </span><span class="hidden">Watch later</span></div>
+                            <div><span class="material-icons"style="font-size: 30px;">
+                                thumb_up
+                                </span><span class="hidden"style="font-size: 30px;">Liked videos</span></div>
+</div>
+<div id="grid">
+
+</div>
+</div>
 </body>
 </html>
+<script src="index.js"></script>
