@@ -69,8 +69,8 @@ function showpopualar(video_data){
 }
 popualar()
 
-logincheck()
 
+var logintest= 0;
 function logincheck(){
     if(localStorage.getItem("youtube")=== null){
         localStorage.setItem("youtube", JSON.stringify([]))
@@ -78,8 +78,29 @@ function logincheck(){
 
     let user_details = JSON.parse(localStorage.getItem("youtube"))
     console.log(user_details)
+    if(user_details.username != undefined){
+        let user = document.getElementById("user")
+        user.style.textAlign="center"
+        user.style.width= "100px"
+        user.style.display= "inline-block"
+        user.style.borderRadius= "0px"
+        user.innerHTML = `Welcome ${user_details.name} Click to logout`
+        logintest = 1;
 }
 
-function login(){
-    window.location.href = "login.html"
 }
+
+
+function login(){
+    if(logintest == 0){
+    window.location.href = "login.html"
+    }
+    else{
+        if(confirm("Are you sure to log out?")==true){
+            localStorage.setItem("youtube",JSON.stringify([]))
+            logintest = 0;
+            window.location.reload();
+        }
+    }
+}
+logincheck()
