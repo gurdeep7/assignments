@@ -1,7 +1,6 @@
  var hidden = document.getElementsByClassName("hidden")
  let i = 0;
  var grid = document.getElementById("grid")
-console.log(hidden)
  function sidebar(){
      if(i == 0){
      for(let i = 0; i < hidden.length; i++){
@@ -69,3 +68,18 @@ function showpopualar(video_data){
      });
 }
 popualar()
+
+logincheck()
+
+function logincheck(){
+    if(localStorage.getItem("youtube")=== null){
+        localStorage.setItem("youtube", JSON.stringify([]))
+    }
+
+    let user_details = JSON.parse(localStorage.getItem("youtube"))
+    console.log(user_details)
+}
+
+function login(){
+    window.location.href = "login.html"
+}

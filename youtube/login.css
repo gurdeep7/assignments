@@ -1,0 +1,14 @@
+body{
+    background-color: lightgrey;
+}
+div{
+    background-color: white;
+    width: fit-content;
+    border-radius: 10%;
+    margin: auto;
+}
+td> *{
+    width: 400px;
+    height: 40px;
+    margin: 10px;
+}
