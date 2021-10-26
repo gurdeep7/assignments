@@ -25,7 +25,7 @@
         <input type="number" id="price1" placeholder="Price" />
         <button onclick="modify()">Modify Product</button>
       </div>
-      <h1>Get data by id no:-</h1>
+      <h1>Get Product by id no:-</h1>
       <input type="number" id="dataid">
       <button onclick="getSpecificData()">GET DATA</button>
 
@@ -45,7 +45,7 @@
         let data  ={
             id: +document.getElementById("id").value,
             name : document.getElementById("name").value,
-            price : document.getElementById("price").value,
+            price : +document.getElementById("price").value,
         };
  
         data = JSON.stringify(data);
@@ -80,8 +80,7 @@
         let data  ={
             id: +document.getElementById("id1").value,
             name : document.getElementById("name1").value,
-            price : document.getElementById("price1").value,
-            active : true,
+            price : +document.getElementById("price1").value,
         };
  
         data = JSON.stringify(data);
