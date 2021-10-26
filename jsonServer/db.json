@@ -36,12 +36,6 @@
       "name": "Ice Cream",
       "price": 2.5,
       "active": false
-    },
-    {
-      "id": 4,
-      "name": "Pizza",
-      "price": "20",
-      "active": true
     }
   ]
 }

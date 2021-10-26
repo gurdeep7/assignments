@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Add Product</h1>
     <div>
         <input type="number" id="id" placeholder="Id" />
         <input type="text" id="name" placeholder="Name" />
@@ -24,11 +25,15 @@
         <input type="number" id="price1" placeholder="Price" />
         <button onclick="modify()">Modify Product</button>
       </div>
+      <h1>Get data by id no:-</h1>
+      <input type="number" id="dataid">
+      <button onclick="getSpecificData()">GET DATA</button>
+
 </body>
 </html>
 <script>
     async function getData(){
-        let res = await fetch(`http://localhost:5000/api/products`);
+        let res = await fetch(`http://localhost:5000/api/products`)
         let data =  await res.json()
 
         console.log("data:- ",data)
@@ -96,5 +101,16 @@
 
         console.log(d)
     }
-    
+    async function getSpecificData(){
+        let  dataid = document.getElementById("dataid").value
+        let res = await fetch(`http://localhost:5000/api/products/${dataid}`,{
+            method : "GET",
+            headers:{
+                "Content-Type":"application/json"
+            },  
+        });
+        let data =  await res.json()
+
+        console.log("data:- ",data)
+    }
 </script>
